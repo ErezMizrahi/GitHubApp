@@ -30,6 +30,7 @@ class FlowManager: Coordinator {
     func start() {
         let loginVC = LoginViewController.instantiateFromMainStoryboard()
         loginVC.flowManager = self
+        self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(loginVC, animated: true)
     }
     
@@ -50,6 +51,7 @@ class FlowManager: Coordinator {
         }
         
         userPageVC.flowManager = self
+        self.navigationController.navigationBar.isHidden = false
         self.navigationController.pushViewController(userPageVC, animated: true)
     }
     
@@ -58,6 +60,8 @@ class FlowManager: Coordinator {
     func instantiateSearchPage() {
         let searchVC = SearchViewController.instantiateFromSearchStoryboard()
         searchVC.flowManager = self
+        
+        self.navigationController.navigationBar.isHidden = false
         self.navigationController.pushViewController(searchVC, animated: true)
     }
     

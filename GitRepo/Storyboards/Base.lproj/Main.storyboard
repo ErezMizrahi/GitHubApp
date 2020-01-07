@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-H1-ipT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414.00000000000045" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="k2b-Yq-QNd">
-                                <rect key="frame" x="16" y="60" width="382" height="448"/>
+                                <rect key="frame" x="16" y="44" width="382" height="448"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="jWo-V1-xk5"/>
                                 </constraints>
@@ -36,13 +36,13 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access git repository all across the web with just a few clicks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rof-HX-UWS">
-                                <rect key="frame" x="106" y="760" width="202" height="70"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <rect key="frame" x="106" y="712" width="202" height="118"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-KB-u9t" customClass="LoginButton" customModule="GitRepo" customModuleProvider="target">
-                                <rect key="frame" x="48" y="680" width="318" height="50"/>
+                                <rect key="frame" x="48" y="632" width="318" height="50"/>
                                 <color key="backgroundColor" red="0.10614211110000001" green="0.1212384626" blue="0.13725730780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gjX-Dh-QAl"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-q5-3BT">
-                                <rect key="frame" x="32" y="540" width="350" height="108"/>
+                                <rect key="frame" x="32" y="492" width="350" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="erezmizrahi" borderStyle="roundedRect" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6L-nZ-xjs" customClass="LoginTextField" customModule="GitRepo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rof-HX-UWS" secondAttribute="trailing" constant="106" id="FCZ-ly-8mU"/>
                             <constraint firstItem="gRU-KB-u9t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="HeP-PD-sy2"/>
                             <constraint firstAttribute="bottom" secondItem="k2b-Yq-QNd" secondAttribute="bottom" constant="32" id="I1W-8O-N9M"/>
-                            <constraint firstItem="iMR-q5-3BT" firstAttribute="top" secondItem="k2b-Yq-QNd" secondAttribute="bottom" constant="32" id="ISp-xq-uDg"/>
+                            <constraint firstItem="iMR-q5-3BT" firstAttribute="top" secondItem="k2b-Yq-QNd" secondAttribute="bottom" id="ISp-xq-uDg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iMR-q5-3BT" secondAttribute="trailing" constant="32" id="JK7-i6-z0q"/>
                             <constraint firstItem="Ypg-H1-ipT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JkL-wK-Itu"/>
                             <constraint firstItem="rof-HX-UWS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="LQt-Ec-yiQ">
@@ -139,7 +139,7 @@
                             <constraint firstItem="k2b-Yq-QNd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kY1-IR-u25"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2b-Yq-QNd" secondAttribute="trailing" constant="3" id="le9-xs-jLs"/>
                             <constraint firstItem="k2b-Yq-QNd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="nRe-S2-CZr"/>
-                            <constraint firstItem="k2b-Yq-QNd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ngI-Xq-2cK"/>
+                            <constraint firstItem="k2b-Yq-QNd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ngI-Xq-2cK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2b-Yq-QNd" secondAttribute="trailing" constant="32" id="pf3-pD-5ot"/>
                             <constraint firstAttribute="bottom" secondItem="Ypg-H1-ipT" secondAttribute="bottom" id="rB1-aG-XlW"/>
                             <constraint firstItem="Ypg-H1-ipT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rsq-2w-Xor"/>
