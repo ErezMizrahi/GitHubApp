@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7C0F4B63-02A0-44BA-B8D7-C81CD83789CC"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F1B4DA2-4935-4518-83C4-E068565365D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Network/RequestAgent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "executeRequest(request:jsonDecoder:completionHanlder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F1B4DA2-4935-4518-83C4-E068565365D0 - 9acc041bd5af337a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.RequestAgent.executeRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(request: GitRepo.Requests, jsonDecoder: Foundation.JSONDecoder, completionHanlder: (Swift.Result&lt;A, GitRepo.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Network/RequestAgent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2403">
+               </Location>
+               <Location
+                  uuid = "3F1B4DA2-4935-4518-83C4-E068565365D0 - d60bff5fd533191c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GitRepo.RequestAgent.executeRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(request: GitRepo.Requests, jsonDecoder: Foundation.JSONDecoder, completionHanlder: (Swift.Result&lt;A, GitRepo.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Network/RequestAgent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "383">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C051C61-1733-484C-8992-6484DED7F9BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Network/RequestAgent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "executeURLRequest(with:jsonDecoder:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C051C61-1733-484C-8992-6484DED7F9BA - bccf9c1ed2e8a369"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.RequestAgent.executeURLRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(with: Foundation.URL, jsonDecoder: Foundation.JSONDecoder, _: (Swift.Result&lt;Swift.Array&lt;A&gt;, GitRepo.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Network/RequestAgent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "553">
+               </Location>
+               <Location
+                  uuid = "0C051C61-1733-484C-8992-6484DED7F9BA - 5205e02eee408812"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GitRepo.RequestAgent.executeURLRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(with: Foundation.URL, jsonDecoder: Foundation.JSONDecoder, _: (Swift.Result&lt;Swift.Array&lt;A&gt;, GitRepo.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Network/RequestAgent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C2DE3E9-BCFC-4EF5-8C86-5478BF9CE0A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "SearchViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "357B5764-A774-4156-A99A-FE395D466282"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "357B5764-A774-4156-A99A-FE395D466282 - b7296f3cc565d309"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.SearchViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1508">
+               </Location>
+               <Location
+                  uuid = "357B5764-A774-4156-A99A-FE395D466282 - 323558e92812780a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GitRepo.SearchVCBL.ResponseFromServer&lt;Swift.Array&lt;GitRepo.UserItem&gt;&gt;) -&gt; () in GitRepo.SearchViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "203">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEBA6A17-3DBF-492E-B3D8-A566B36E766B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEBA6A17-3DBF-492E-B3D8-A566B36E766B - b7296f3cc565d309"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.SearchViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "EEBA6A17-3DBF-492E-B3D8-A566B36E766B - 6022c14f6db42d00"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GitRepo.SearchVCBL.ResponseFromServer&lt;Swift.Array&lt;GitRepo.RepoItem&gt;&gt;) -&gt; () in GitRepo.SearchViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "203">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3027630D-F3F3-4204-8189-2C21D7037A30"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Network/RequestAgent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "searchRepositories(searchTerm:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C338CAB2-14BD-4E13-88EC-4AD9A731F219"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Network/RequestAgent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "searchUsers(searchTerm:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABE487BE-AD6D-4E85-8091-B1157E463E1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchVCBL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "searchUsers(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73D6E949-A099-4518-9375-47E6638C5682"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchVCBL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "searchUsers(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCC55100-A249-47A7-98FC-D972423918EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCC55100-A249-47A7-98FC-D972423918EC - c758ab1777d0f819"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.SearchViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "15925">
+               </Location>
+               <Location
+                  uuid = "BCC55100-A249-47A7-98FC-D972423918EC - c758ab1777d0f819"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitRepo.SearchViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "GitRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erezmizrahi/Desktop/Personal%20Projects/Swift%20Projects/GitRepo/GitRepo/Controller/Seach/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "16023">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D718D64-F497-4659-ADE3-D5B13795833A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Seach/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35DD3D60-B733-4285-8F85-C1B5C914919E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Menu/MenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9C87D78-02F1-41E3-A35B-241D2D89544D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Menu/MenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B709705F-0180-4AAA-B92C-395BEC03C5C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Network/RequestAgent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "searchRepositories(searchTerm:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7475527-FB05-4540-BED7-C3C1EDF84927"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitRepo/Controller/Profile/UserPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
