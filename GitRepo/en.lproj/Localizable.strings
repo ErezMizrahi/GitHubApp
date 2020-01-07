@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  GitRepo
+
+  Created by Erez Mizrahi on 02/01/2020.
+  Copyright © 2020 com.erez8. All rights reserved.
+*/
+
+
+"Error.connection" = "one or more details are wrong \n try again";
+"Error.badCredentials" = "there as been a connection problem, \n are you connect to the internet?";

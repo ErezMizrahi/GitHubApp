@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="fWT-E9-aKp">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="oyk-Lp-EQw" customClass="SearchViewController" customModule="GitRepo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsM-bo-Cye">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-q3-D0q">
+                                <rect key="frame" x="0.0" y="133" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="l3A-Ez-ZOj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l3A-Ez-ZOj" id="k10-Sx-dHt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shX-lA-eiJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tCH-qG-vlT"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hlm-eY-bhh">
+                                <rect key="frame" x="0.0" y="102" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Repositories"/>
+                                    <segment title="Users"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeOfSearchSegmentAction:" destination="oyk-Lp-EQw" eventType="valueChanged" id="9Ky-Lq-lcd"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5dC-Ai-1ga" firstAttribute="trailing" secondItem="hlm-eY-bhh" secondAttribute="trailing" id="4SJ-W0-Ljt"/>
+                            <constraint firstItem="5dC-Ai-1ga" firstAttribute="bottom" secondItem="qq6-q3-D0q" secondAttribute="bottom" id="8Dy-Pi-DVf"/>
+                            <constraint firstItem="shX-lA-eiJ" firstAttribute="leading" secondItem="5dC-Ai-1ga" secondAttribute="leading" id="G79-wT-d1o"/>
+                            <constraint firstItem="qq6-q3-D0q" firstAttribute="leading" secondItem="5dC-Ai-1ga" secondAttribute="leading" id="cjK-et-Idw"/>
+                            <constraint firstItem="hlm-eY-bhh" firstAttribute="leading" secondItem="5dC-Ai-1ga" secondAttribute="leading" id="fXc-dh-TPt"/>
+                            <constraint firstItem="shX-lA-eiJ" firstAttribute="top" secondItem="5dC-Ai-1ga" secondAttribute="top" id="ig1-DD-j7y"/>
+                            <constraint firstItem="hlm-eY-bhh" firstAttribute="top" secondItem="shX-lA-eiJ" secondAttribute="bottom" constant="8" id="jhD-aO-zKi"/>
+                            <constraint firstItem="5dC-Ai-1ga" firstAttribute="trailing" secondItem="shX-lA-eiJ" secondAttribute="trailing" id="k7H-70-Wdx"/>
+                            <constraint firstItem="qq6-q3-D0q" firstAttribute="top" secondItem="hlm-eY-bhh" secondAttribute="bottom" id="xzl-U5-o6L"/>
+                            <constraint firstItem="5dC-Ai-1ga" firstAttribute="trailing" secondItem="qq6-q3-D0q" secondAttribute="trailing" id="ycu-F8-8l1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5dC-Ai-1ga"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchContainerView" destination="shX-lA-eiJ" id="qEa-a7-Wtf"/>
+                        <outlet property="tableView" destination="qq6-q3-D0q" id="7Qa-HR-TON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQB-we-avm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.73913043478262" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+</document>
