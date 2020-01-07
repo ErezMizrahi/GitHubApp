@@ -26,6 +26,9 @@
 		6455301323C46D4300B6E358 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301223C46D4300B6E358 /* Storyboarded.swift */; };
 		6455301623C476ED00B6E358 /* UserDefualtsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301523C476ED00B6E358 /* UserDefualtsStore.swift */; };
 		6455301823C482EC00B6E358 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301723C482EC00B6E358 /* MenuManager.swift */; };
+		6455301A23C49B0700B6E358 /* SearchReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301923C49B0700B6E358 /* SearchReposViewController.swift */; };
+		6455301C23C4A04F00B6E358 /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301B23C4A04F00B6E358 /* SearchUsersViewController.swift */; };
+		6455301E23C4B28800B6E358 /* UserSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455301D23C4B28800B6E358 /* UserSearchCell.swift */; };
 		64E5B79423C1EB870027E8CA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5B79323C1EB870027E8CA /* MenuViewController.swift */; };
 		64E61B9B23BB474E0032C9E2 /* RequestAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61B9A23BB474E0032C9E2 /* RequestAgent.swift */; };
 		64E61B9D23BB53B70032C9E2 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61B9C23BB53B70032C9E2 /* LoginModels.swift */; };
@@ -33,7 +36,7 @@
 		64E61BA123BCD1910032C9E2 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E61BA023BCD1910032C9E2 /* UserPage.storyboard */; };
 		64E61BA523BCD2B30032C9E2 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BA423BCD2B30032C9E2 /* UserPageViewController.swift */; };
 		64E61BA723BCE4BB0032C9E2 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BA623BCE4BB0032C9E2 /* ErrorViewController.swift */; };
-		64E61BA923BCE89F0032C9E2 /* BaseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BA823BCE89F0032C9E2 /* BaseLoginViewController.swift */; };
+		64E61BA923BCE89F0032C9E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BA823BCE89F0032C9E2 /* BaseViewController.swift */; };
 		64E61BAC23BDD5B80032C9E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64E61BAE23BDD5B80032C9E2 /* Localizable.strings */; };
 		64E61BB023BDD6230032C9E2 /* localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BAF23BDD6230032C9E2 /* localized.swift */; };
 		64E61BB423BDD94C0032C9E2 /* TopChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E61BB323BDD94C0032C9E2 /* TopChildViewController.swift */; };
@@ -69,6 +72,9 @@
 		6455301223C46D4300B6E358 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		6455301523C476ED00B6E358 /* UserDefualtsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefualtsStore.swift; sourceTree = "<group>"; };
 		6455301723C482EC00B6E358 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		6455301923C49B0700B6E358 /* SearchReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReposViewController.swift; sourceTree = "<group>"; };
+		6455301B23C4A04F00B6E358 /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
+		6455301D23C4B28800B6E358 /* UserSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchCell.swift; sourceTree = "<group>"; };
 		64E5B79323C1EB870027E8CA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		64E61B9A23BB474E0032C9E2 /* RequestAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAgent.swift; sourceTree = "<group>"; };
 		64E61B9C23BB53B70032C9E2 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
@@ -76,7 +82,7 @@
 		64E61BA023BCD1910032C9E2 /* UserPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPage.storyboard; sourceTree = "<group>"; };
 		64E61BA423BCD2B30032C9E2 /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		64E61BA623BCE4BB0032C9E2 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
-		64E61BA823BCE89F0032C9E2 /* BaseLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoginViewController.swift; sourceTree = "<group>"; };
+		64E61BA823BCE89F0032C9E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64E61BAD23BDD5B80032C9E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64E61BAF23BDD6230032C9E2 /* localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localized.swift; sourceTree = "<group>"; };
 		64E61BB323BDD94C0032C9E2 /* TopChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChildViewController.swift; sourceTree = "<group>"; };
@@ -169,13 +175,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6455300223C327C300B6E358 /* Seach */ = {
+		6455300223C327C300B6E358 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				6455300323C327D900B6E358 /* SearchViewController.swift */,
 				6455300523C332AA00B6E358 /* SearchVCBL.swift */,
+				6455301923C49B0700B6E358 /* SearchReposViewController.swift */,
+				6455301B23C4A04F00B6E358 /* SearchUsersViewController.swift */,
+				6455301D23C4B28800B6E358 /* UserSearchCell.swift */,
 			);
-			path = Seach;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		6455300723C3355500B6E358 /* Models */ = {
@@ -238,11 +247,11 @@
 		64E61BA323BCD2940032C9E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6455300223C327C300B6E358 /* Seach */,
+				6455300223C327C300B6E358 /* Search */,
 				64E61BC223BE4DE70032C9E2 /* Menu */,
 				64E61BB223BDD9390032C9E2 /* Profile */,
 				64E61BB123BDD92A0032C9E2 /* Login */,
-				64E61BA823BCE89F0032C9E2 /* BaseLoginViewController.swift */,
+				64E61BA823BCE89F0032C9E2 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6455301823C482EC00B6E358 /* MenuManager.swift in Sources */,
+				6455301C23C4A04F00B6E358 /* SearchUsersViewController.swift in Sources */,
 				64E61BB023BDD6230032C9E2 /* localized.swift in Sources */,
 				6455300C23C36BDD00B6E358 /* UsersSearch.swift in Sources */,
 				6455300F23C46BCA00B6E358 /* Coordinator.swift in Sources */,
@@ -421,8 +431,10 @@
 				6453DF0023B4A3EF00508C15 /* LoginTextField.swift in Sources */,
 				6455300423C327D900B6E358 /* SearchViewController.swift in Sources */,
 				6455301623C476ED00B6E358 /* UserDefualtsStore.swift in Sources */,
+				6455301E23C4B28800B6E358 /* UserSearchCell.swift in Sources */,
 				64E61B9B23BB474E0032C9E2 /* RequestAgent.swift in Sources */,
 				6455300A23C3356A00B6E358 /* RepoSearch.swift in Sources */,
+				6455301A23C49B0700B6E358 /* SearchReposViewController.swift in Sources */,
 				6453DEFE23B4A3C300508C15 /* ViewExtensions.swift in Sources */,
 				64E61BB823BDE8940032C9E2 /* ReposViewController.swift in Sources */,
 				64E61BC123BE4BE70032C9E2 /* Menu.swift in Sources */,
@@ -431,7 +443,7 @@
 				64E61BBA23BDEA5D0032C9E2 /* RepoModel.swift in Sources */,
 				64E61BBE23BE2B760032C9E2 /* LoginVCBL.swift in Sources */,
 				6455301123C46CC700B6E358 /* FlowManager.swift in Sources */,
-				64E61BA923BCE89F0032C9E2 /* BaseLoginViewController.swift in Sources */,
+				64E61BA923BCE89F0032C9E2 /* BaseViewController.swift in Sources */,
 				6455301323C46D4300B6E358 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

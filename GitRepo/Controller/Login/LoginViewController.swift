@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class LoginViewController: BaseLoginViewController, Storyboarded {
+class LoginViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var userNameTextFeild: LoginTextField!
     @IBOutlet weak var passwordTextFeild: LoginTextField!

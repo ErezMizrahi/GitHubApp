@@ -11,8 +11,13 @@ import UIKit
 protocol SelfConfigureCell: class {
     static var identifier: String { get }
     func configure(with dataSource : Repo)
+    func configure(with dataSource : UserViewModel)
 }
+extension SelfConfigureCell {
+    func configure(with dataSource: Repo) { }
+    func configure(with dataSource : UserViewModel) { }
 
+}
 
 class RepoCell: UITableViewCell, SelfConfigureCell {
     static var identifier: String = "cellID"

@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol RepoSearchDelegate: class {
+    func didSearchedForRepo()
+}
 
-class SearchViewController: UIViewController, Storyboarded {
+protocol UserSearchDelegate: class {
+    func didSearchedForUser()
+}
+
+class SearchViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var searchContainerView: UIView!
     
+    @IBOutlet weak var listContrainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var searchController: UISearchController!
@@ -21,38 +29,86 @@ class SearchViewController: UIViewController, Storyboarded {
     var bl: SearchVCBL!
     weak var flowManager: FlowManager?
     
+    weak var repoDelegate: RepoSearchDelegate?
+    
+    var repoSearchVC: SearchReposViewController? {
+        return children.compactMap{$0 as? SearchReposViewController}.first
+    }
+    
+    var userSearchVC: SearchUsersViewController? {
+        return children.compactMap{$0 as? SearchUsersViewController}.first
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTableview()
+        print(children)
         setupSearchController()
     }
     
-    
-    private func setupTableview() {
-        tableView.delegate = self
-        tableView.dataSource = self
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SearchReposViewController" {
+            let _ = segue.destination as? SearchReposViewController
+            //            destVC?.originalDataSource = self.originalDataSource
+            //            destVC?.currentDataSource = self.currentDataSource
+            //            destVC?.user = user
+        }
+        
+        //        if segue.identifier == "ReposViewController" {
+        //            let destVC = segue.destination as? ReposViewController
+        //            destVC?.user = user
+        //        }
     }
+    
     
     private func setupSearchController() {
         self.bl = SearchVCBL()
         searchController = UISearchController(searchResultsController: nil)
-        
         searchController.obscuresBackgroundDuringPresentation = false
         searchContainerView.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
     }
     
+    @discardableResult
+    private func repoSearchChildVC() -> SearchReposViewController {
+        removeAllChildren()
+        let repoVC = SearchReposViewController.instantiateFromSearchStoryboard()
+        repoVC.flowManager = flowManager
+        self.addChild(repoVC)
+        listContrainerView.addSubview(repoVC.view)
+        repoVC.didMove(toParent: self)
+        return repoVC
+    }
     
-    private func restoreToOriginalDataSource() {
-        currentDataSource = originalDataSource
-        tableView.reloadData()
+    @discardableResult
+    private func userSearchChildVC() -> SearchUsersViewController {
+        removeAllChildren()
+        
+        let userSearch = SearchUsersViewController.instantiateFromSearchStoryboard()
+        userSearch.flowManager = flowManager
+        self.addChild(userSearch)
+        listContrainerView.addSubview(userSearch.view)
+        userSearch.didMove(toParent: self)
+        return userSearch
     }
     
     
+    
     @IBAction func typeOfSearchSegmentAction(_ sender: UISegmentedControl) {
-        let searchType = SearchVCBL.TypeOfSearch(rawValue: sender.selectedSegmentIndex) ?? .repositories
-        self.bl.searchType = searchType
+        switch sender.selectedSegmentIndex {
+        case 0:
+            repoSearchChildVC()
+            let searchType = SearchVCBL.TypeOfSearch(rawValue: sender.selectedSegmentIndex) ?? .repositories
+                 self.bl.searchType = searchType
+        case 1:
+            userSearchChildVC()
+            let searchType = SearchVCBL.TypeOfSearch(rawValue: sender.selectedSegmentIndex) ?? .repositories
+                 self.bl.searchType = searchType
+        default:
+            break
+        }
+        
+     
     }
     
 }
@@ -74,11 +130,9 @@ extension SearchViewController: UISearchBarDelegate {
                     case let .failure(error):
                         print(error.localizedDescription)
                         self.view.removeIndicatorInView()
-                    case let .success(items):
                         
-                        self.originalDataSource = items
-                        self.restoreToOriginalDataSource()
-                        self.tableView.reloadData()
+                    case let .success(items):
+                        self.repoSearchChildVC().setupDataSource(with: items)
                         self.view.removeIndicatorInView()
                         
                     }
@@ -94,9 +148,9 @@ extension SearchViewController: UISearchBarDelegate {
                         print(error.localizedDescription)
                         self.view.removeIndicatorInView()
                     case let .success(items):
-                        self.originalDataSource = items
-                        self.restoreToOriginalDataSource()
-                        self.tableView.reloadData()
+                        self.userSearchChildVC().setupDataSource(with: items)
+//                        self.originalDataSource = items
+//                        self.tableView.reloadData()
                         self.view.removeIndicatorInView()
                         
                     }

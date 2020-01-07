@@ -1,5 +1,5 @@
 //
-//  BaseLoginViewController.swift
+//  BaseViewController.swift
 //  GitRepo
 //
 //  Created by Erez Mizrahi on 01/01/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseLoginViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     lazy var errorViewController: ErrorViewController? = {
           return children.compactMap { $0 as? ErrorViewController }.first

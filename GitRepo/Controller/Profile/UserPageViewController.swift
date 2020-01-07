@@ -20,7 +20,7 @@ class UserPageViewController: UIViewController, Storyboarded {
     
     var user: UserViewModel? {
         didSet {
-            if user?.bio?.count ?? 0 < 1 {
+            if user?.bio.count ?? 0 < 1 {
                 self.navigationItem.leftBarButtonItem = nil
             }
         }

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class FlowManager: Coordinator {
+    
+    
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
@@ -24,6 +26,7 @@ class FlowManager: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        
     }
     
     

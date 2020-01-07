@@ -9,11 +9,12 @@
 import Foundation
 
 struct UserViewModel: Codable {
+    let identifier: UUID = UUID()
     let name: String
-    let login: String?
-    let location: String?
-    let bio: String?
-    let reposURL: String?
+    let login: String
+    let location: String
+    let bio: String
+    let reposURL: String
     let avaterURL: String
     
     init?(user: LoggedInUser) {
@@ -58,6 +59,18 @@ struct UserViewModel: Codable {
 
     }
 }
+
+extension UserViewModel: Hashable {
+    func hash(into hasher: inout Hasher) {
+         hasher.combine(identifier)
+     }
+}
+
+//extension UserViewModel {
+//    static func == (lhs: UserViewModel, rhs: UserViewModel) -> Bool {
+//    return lhs.identifier == rhs.identifier
+//    }
+//}
 
 struct LoggedInUser: Codable, Model {
     let login: String
