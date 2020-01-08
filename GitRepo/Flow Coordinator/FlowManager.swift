@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
+
 class FlowManager: Coordinator {
+    
     
     
     var childCoordinators = [Coordinator]()
@@ -68,5 +70,39 @@ class FlowManager: Coordinator {
         self.navigationController.pushViewController(searchVC, animated: true)
     }
     
+    
+    @discardableResult
+    func embedController(with searchType: SearchVCBL.TypeOfSearch ,of viewController: BaseViewController, into container: UIView) -> UIViewController {
+        viewController.removeAllChildren()
+        switch searchType {
+        case .repositories:
+            let repoVC = SearchReposViewController.instantiateFromSearchStoryboard()
+            repoVC.flowManager = self
+            viewController.addChild(repoVC)
+            container.addSubview(repoVC.view)
+            repoVC.didMove(toParent: viewController)
+            return repoVC
+        case .users:
+            let userSearch = SearchUsersViewController.instantiateFromSearchStoryboard()
+                  userSearch.flowManager = self
+                  viewController.addChild(userSearch)
+                  container.addSubview(userSearch.view)
+                  userSearch.didMove(toParent: viewController)
+                  return userSearch
+        }
+        
+    }
+    
+//    @discardableResult
+//     func userSearchChildVC(of viewController: UIViewController, into container: UIView) -> SearchUsersViewController {
+////        removeAllChildren()
+//        
+//        let userSearch = SearchUsersViewController.instantiateFromSearchStoryboard()
+//        userSearch.flowManager = self
+//        viewController.addChild(userSearch)
+//        container.addSubview(userSearch.view)
+//        userSearch.didMove(toParent: viewController)
+//        return userSearch
+//    }
     
 }

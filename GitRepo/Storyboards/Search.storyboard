@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="50" id="tCH-qG-vlT"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hlm-eY-bhh">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hlm-eY-bhh">
                                 <rect key="frame" x="0.0" y="102" width="414" height="32"/>
                                 <segments>
                                     <segment title="Repositories"/>
@@ -91,6 +91,7 @@
                             <constraint firstAttribute="trailing" secondItem="rp2-lu-U2i" secondAttribute="trailing" id="hHT-Cu-pt9"/>
                             <constraint firstItem="rp2-lu-U2i" firstAttribute="top" secondItem="DpH-we-CDe" secondAttribute="top" id="pjN-nP-p2u"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="PSN-Jb-jWu"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rp2-lu-U2i" id="wbh-YG-uj2"/>
@@ -161,6 +162,7 @@
                             <constraint firstAttribute="bottom" secondItem="j30-rg-V2V" secondAttribute="bottom" id="WXu-oe-j1i"/>
                             <constraint firstItem="j30-rg-V2V" firstAttribute="top" secondItem="E1o-6i-F6G" secondAttribute="top" id="ZsQ-f0-6dO"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="cSJ-He-IBd"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="j30-rg-V2V" id="5Ay-kW-D8T"/>

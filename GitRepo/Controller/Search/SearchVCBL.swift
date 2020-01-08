@@ -21,11 +21,7 @@ struct SearchVCBL {
      
     var searchType: TypeOfSearch = .repositories
     
-
-    
      func searchRepo(_ completionHandler: @escaping (ResponseFromServer<[RepoItem]>)->()) {
-
-
             Requests.searchRepositories(searchTerm: searchTerm) { res in
                       switch res {
                       case .failure(let error):

@@ -31,6 +31,7 @@ class SearchViewController: BaseViewController, Storyboarded {
     
     weak var repoDelegate: RepoSearchDelegate?
     
+    
     var repoSearchVC: SearchReposViewController? {
         return children.compactMap{$0 as? SearchReposViewController}.first
     }
@@ -42,23 +43,10 @@ class SearchViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(children)
+        
         setupSearchController()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SearchReposViewController" {
-            let _ = segue.destination as? SearchReposViewController
-            //            destVC?.originalDataSource = self.originalDataSource
-            //            destVC?.currentDataSource = self.currentDataSource
-            //            destVC?.user = user
-        }
-        
-        //        if segue.identifier == "ReposViewController" {
-        //            let destVC = segue.destination as? ReposViewController
-        //            destVC?.user = user
-        //        }
-    }
     
     
     private func setupSearchController() {
@@ -67,48 +55,27 @@ class SearchViewController: BaseViewController, Storyboarded {
         searchController.obscuresBackgroundDuringPresentation = false
         searchContainerView.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
+        self.flowManager?.embedController(with: .repositories, of: self, into: self.listContrainerView)
+
     }
-    
-    @discardableResult
-    private func repoSearchChildVC() -> SearchReposViewController {
-        removeAllChildren()
-        let repoVC = SearchReposViewController.instantiateFromSearchStoryboard()
-        repoVC.flowManager = flowManager
-        self.addChild(repoVC)
-        listContrainerView.addSubview(repoVC.view)
-        repoVC.didMove(toParent: self)
-        return repoVC
-    }
-    
-    @discardableResult
-    private func userSearchChildVC() -> SearchUsersViewController {
-        removeAllChildren()
-        
-        let userSearch = SearchUsersViewController.instantiateFromSearchStoryboard()
-        userSearch.flowManager = flowManager
-        self.addChild(userSearch)
-        listContrainerView.addSubview(userSearch.view)
-        userSearch.didMove(toParent: self)
-        return userSearch
-    }
-    
     
     
     @IBAction func typeOfSearchSegmentAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            repoSearchChildVC()
             let searchType = SearchVCBL.TypeOfSearch(rawValue: sender.selectedSegmentIndex) ?? .repositories
-                 self.bl.searchType = searchType
+            self.bl.searchType = searchType
+            self.flowManager?.embedController(with: searchType, of: self, into: self.listContrainerView)
         case 1:
-            userSearchChildVC()
             let searchType = SearchVCBL.TypeOfSearch(rawValue: sender.selectedSegmentIndex) ?? .repositories
-                 self.bl.searchType = searchType
+            self.bl.searchType = searchType
+            self.flowManager?.embedController(with: searchType, of: self, into: self.listContrainerView)
+            
         default:
             break
         }
         
-     
+        
     }
     
 }
@@ -121,18 +88,18 @@ extension SearchViewController: UISearchBarDelegate {
         guard let search = searchBar.text else { return }
         self.bl.searchTerm = search
         
-        switch bl.searchType {
+        switch self.bl.searchType {
         case .repositories:
-            bl?.searchRepo() { items in
-                DispatchQueue.main.async {
-                    print(items)
-                    switch items {
-                    case let .failure(error):
-                        print(error.localizedDescription)
+            self.bl?.searchRepo() { items in
+                switch items {
+                case let .failure(error):
+                    print(error.localizedDescription)
+                    DispatchQueue.main.async {
                         self.view.removeIndicatorInView()
-                        
-                    case let .success(items):
-                        self.repoSearchChildVC().setupDataSource(with: items)
+                    }
+                case let .success(items):
+                    DispatchQueue.main.async {
+                        self.repoSearchVC?.setupDataSource(with: items)
                         self.view.removeIndicatorInView()
                         
                     }
@@ -140,17 +107,16 @@ extension SearchViewController: UISearchBarDelegate {
             }
             
         case .users:
-            bl?.searchUsers() { users in
-                DispatchQueue.main.async {
-                    print(users)
-                    switch users {
-                    case let .failure(error):
-                        print(error.localizedDescription)
+            self.bl?.searchUsers() { users in
+                switch users {
+                case let .failure(error):
+                    print(error.localizedDescription)
+                    DispatchQueue.main.async {
                         self.view.removeIndicatorInView()
-                    case let .success(items):
-                        self.userSearchChildVC().setupDataSource(with: items)
-//                        self.originalDataSource = items
-//                        self.tableView.reloadData()
+                    }
+                case let .success(items):
+                    DispatchQueue.main.async {
+                        self.userSearchVC?.setupDataSource(with: items)
                         self.view.removeIndicatorInView()
                         
                     }
@@ -158,38 +124,11 @@ extension SearchViewController: UISearchBarDelegate {
             }
             
         }
-        
     }
+    
+    
 }
 
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentDataSource.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //        let searchResult =
-        if let searchResult = currentDataSource[indexPath.row] as? RepoItem {
-            cell.textLabel?.text = searchResult.fullName
-        } else if let searchResult = currentDataSource[indexPath.row] as? UserItem {
-            cell.textLabel?.text = searchResult.login
-        }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(currentDataSource[indexPath.row])
-        tableView.deselectRow(at: indexPath, animated: true)
-        if let _ = currentDataSource[indexPath.row] as? RepoItem {
-            print(currentDataSource[indexPath.row])
-        } else if let searchResult = currentDataSource[indexPath.row] as? UserItem {
-            self.dismiss(animated: true) {
-                guard let user = UserViewModel(user: searchResult) else { return }
-                self.flowManager?.instantiateUserPage(for: user)
-            }
-        }
-    }
-}
+
 

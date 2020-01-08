@@ -66,7 +66,6 @@ class SearchUsersViewController: UIViewController, Storyboarded {
         }
         )
         
-        print("")
     }
     
     

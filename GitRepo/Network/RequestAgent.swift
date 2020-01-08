@@ -75,9 +75,7 @@ class RequestAgent {
             
         case .searchRepositories, .searchUsers:
             urlRequest.setValue("application", forHTTPHeaderField: "vnd.github.mercy-preview+json")
-            
-        default:
-            return
+        
         }
         
         //set http method if post
@@ -168,27 +166,7 @@ struct Requests {
         }
         
     }
-    static func search<T:Codable>(searchTerm: String,searchType: SearchVCBL.TypeOfSearch ,_ callback: @escaping (Result<T,NetworkError>)->()) {
-        switch searchType {
-        case .repositories:
-              let request = Requests(httpMethod: .GET, params: ["q": searchTerm,
-                                                                       ], path: .searchRepositories)
-                     RequestAgent.shared.executeRequest(request: request) { res in
-                         callback(res)
-                     }
-        case .users:
-              let request = Requests(httpMethod: .GET, params: ["q": searchTerm,
-                                                                       ], path: .searchUsers)
-                     RequestAgent.shared.executeRequest(request: request) { res in
-                         callback(res)
-                     }
-        }
-         
-       }
-    
-    
-    
-    static func searchRepositories(searchTerm: String, _ callback: @escaping (Result<RepoSearch,NetworkError>)->()) {
+      static func searchRepositories(searchTerm: String, _ callback: @escaping (Result<RepoSearch,NetworkError>)->()) {
         let request = Requests(httpMethod: .GET, params: ["q": searchTerm,
                                                           ], path: .searchRepositories)
         RequestAgent.shared.executeRequest(request: request) { res in
